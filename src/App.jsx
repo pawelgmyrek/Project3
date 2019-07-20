@@ -12,6 +12,7 @@ import Signup from './screens/Signup';
 import Main from './screens/Main';
 import Logout from './screens/Logout';
 import NavMenu from './components/NavMenu';
+import Game from './pages/Game';
 
 class App extends Component {
   constructor(props) {
@@ -108,6 +109,7 @@ class App extends Component {
                 />
               )}
             />
+            <Route exact path="/game" component={Game} />
             <Route exact path="/signup" component={Signup} />
             <Route
               exact

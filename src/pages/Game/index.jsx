@@ -1,4 +1,7 @@
-class App extends React.Component {
+import React from "react";
+import "./styles.scss";
+
+class Game extends React.Component {
   constructor(props) {
     super(props);
 
@@ -188,4 +191,4 @@ const Cell = ({ value, columnIndex, play }) => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('main'));
+export default Game;
