@@ -3,9 +3,9 @@ const cloudinary = require('cloudinary').v2;
 
 async function connect() {
   await cloudinary.config({
-    cloud_name: process.env.CLOUDINARY_NAME,
-    api_key: process.env.CLOUDINARY_API_KEY,
-    api_secret: process.env.CLOUDINARY_API_SECRET,
+    cloud_name: 'ddsikzemi',
+   api_key: '853564394133989',
+   api_secret: 'IxsNbULkfSaDorFXt4ybWJSd_cc',
   });
   console.log('Connected to Cloudinary');
 }

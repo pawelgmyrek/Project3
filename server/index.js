@@ -23,7 +23,7 @@ const serverError = (err, msg) => {
 
 const setupPassport = () => {
   // We need to use sessions to keep track of our user's login status
-  app.use(session({ secret: process.env.SESSION_SECRET, resave: true, saveUninitialized: true }));
+  app.use(session({ secret:'anything', resave: true, saveUninitialized: true }));
   app.use(passport.initialize());
   app.use(passport.session());
 
