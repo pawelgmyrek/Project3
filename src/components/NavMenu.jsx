@@ -43,6 +43,11 @@ const NavMenu = (props) => {
               Home
             </StyledNavLink>
           </LinkContainer>
+          <LinkContainer to="/game">
+            <StyledNavLink className={(pathname === '/game') ? 'active' : null}>
+              Game
+              </StyledNavLink>
+              </LinkContainer>
           {
             isLoggedIn
               ? (
