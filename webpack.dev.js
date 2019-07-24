@@ -11,10 +11,12 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
+
+        { test: /\.css$/, use: 'css-loader' }
     ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ['*', '.js', '.jsx', '.css'],
   },
   output: {
     path: path.join(__dirname, 'dist'),
