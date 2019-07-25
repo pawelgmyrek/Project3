@@ -11,12 +11,14 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
-
-        { test: /\.css$/, use: 'css-loader' }
+      {
+        test: /\.css$/,
+        use: ['to-string-loader', 'css-loader'],
+      },
     ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.css'],
+    extensions: ['*', '.js', '.jsx'],
   },
   output: {
     path: path.join(__dirname, 'dist'),

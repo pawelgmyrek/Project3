@@ -43,11 +43,6 @@ const NavMenu = (props) => {
               Home
             </StyledNavLink>
           </LinkContainer>
-          <LinkContainer exact to="/Game">
-            <StyledNavLink>
-              Game
-            </StyledNavLink>
-          </LinkContainer>
           {
             isLoggedIn
               ? (
