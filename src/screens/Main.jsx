@@ -1,4 +1,10 @@
-class App extends React.Component {
+import React from 'react';
+// import styles from './styles.css';
+
+// var css = require("css!./style.css");
+// @import 'style.css' => require('./style.css')
+
+class Main extends React.Component {
   constructor(props) {
     super(props);
 
@@ -8,7 +14,7 @@ class App extends React.Component {
       currentPlayer: null,
       board: [],
       gameOver: false,
-      message: ''
+      message: '',
     };
 
     // Bind play function to App component
@@ -18,10 +24,10 @@ class App extends React.Component {
   // Starts new game
   initBoard() {
     // Create a blank 6x7 matrix
-    let board = [];
+    const board = [];
     for (let r = 0; r < 6; r++) {
-      let row = [];
-      for (let c = 0; c < 7; c++) { row.push(null) }
+      const row = [];
+      for (let c = 0; c < 7; c++) { row.push(null); }
       board.push(row);
     }
 
@@ -29,7 +35,7 @@ class App extends React.Component {
       board,
       currentPlayer: this.state.player1,
       gameOver: false,
-      message: ''
+      message: '',
     });
   }
 
@@ -40,7 +46,7 @@ class App extends React.Component {
   play(c) {
     if (!this.state.gameOver) {
       // Place piece on board
-      let board = this.state.board;
+      const board = this.state.board;
       for (let r = 5; r >= 0; r--) {
         if (!board[r][c]) {
           board[r][c] = this.state.currentPlayer;
@@ -49,7 +55,7 @@ class App extends React.Component {
       }
 
       // Check status of board
-      let result = this.checkAll(board);
+      const result = this.checkAll(board);
       if (result === this.state.player1) {
         this.setState({ board, gameOver: true, message: 'Player 1 (red) wins!' });
       } else if (result === this.state.player2) {
@@ -69,9 +75,9 @@ class App extends React.Component {
     for (let r = 3; r < 6; r++) {
       for (let c = 0; c < 7; c++) {
         if (board[r][c]) {
-          if (board[r][c] === board[r - 1][c] &&
-              board[r][c] === board[r - 2][c] &&
-              board[r][c] === board[r - 3][c]) {
+          if (board[r][c] === board[r - 1][c]
+              && board[r][c] === board[r - 2][c]
+              && board[r][c] === board[r - 3][c]) {
             return board[r][c];
           }
         }
@@ -84,9 +90,9 @@ class App extends React.Component {
     for (let r = 0; r < 6; r++) {
       for (let c = 0; c < 4; c++) {
         if (board[r][c]) {
-          if (board[r][c] === board[r][c + 1] &&
-              board[r][c] === board[r][c + 2] &&
-              board[r][c] === board[r][c + 3]) {
+          if (board[r][c] === board[r][c + 1]
+              && board[r][c] === board[r][c + 2]
+              && board[r][c] === board[r][c + 3]) {
             return board[r][c];
           }
         }
@@ -99,9 +105,9 @@ class App extends React.Component {
     for (let r = 3; r < 6; r++) {
       for (let c = 0; c < 4; c++) {
         if (board[r][c]) {
-          if (board[r][c] === board[r - 1][c + 1] &&
-              board[r][c] === board[r - 2][c + 2] &&
-              board[r][c] === board[r - 3][c + 3]) {
+          if (board[r][c] === board[r - 1][c + 1]
+              && board[r][c] === board[r - 2][c + 2]
+              && board[r][c] === board[r - 3][c + 3]) {
             return board[r][c];
           }
         }
@@ -114,9 +120,9 @@ class App extends React.Component {
     for (let r = 3; r < 6; r++) {
       for (let c = 3; c < 7; c++) {
         if (board[r][c]) {
-          if (board[r][c] === board[r - 1][c - 1] &&
-              board[r][c] === board[r - 2][c - 2] &&
-              board[r][c] === board[r - 3][c - 3]) {
+          if (board[r][c] === board[r - 1][c - 1]
+              && board[r][c] === board[r - 2][c - 2]
+              && board[r][c] === board[r - 3][c - 3]) {
             return board[r][c];
           }
         }
@@ -145,31 +151,28 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="button" onClick={() => {this.initBoard()}}>New Game</div>
-
+      <>
+        <br></br>
+        <div className="button" onClick={() => { this.initBoard(); }}>New Game!!!</div>
         <table>
-          <thead>
-          </thead>
+          <thead />
           <tbody>
             {this.state.board.map((row, i) => (<Row key={i} row={row} play={this.play} />))}
           </tbody>
         </table>
 
         <p className="message">{this.state.message}</p>
-      </div>
+      </>
     );
   }
 }
 
 // Row component
-const Row = ({ row, play }) => {
-  return (
+const Row = ({ row, play }) => (
     <tr>
       {row.map((cell, i) => <Cell key={i} value={cell} columnIndex={i} play={play} />)}
     </tr>
   );
-};
 
 const Cell = ({ value, columnIndex, play }) => {
   let color = 'white';
@@ -181,11 +184,11 @@ const Cell = ({ value, columnIndex, play }) => {
 
   return (
     <td>
-      <div className="cell" onClick={() => {play(columnIndex)}}>
-        <div className={color}></div>
+      <div className="cell" onClick={() => { play(columnIndex) ;}}>
+        <div className={color} />
       </div>
     </td>
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('main'));
+export default Main;
