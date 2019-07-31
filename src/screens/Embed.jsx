@@ -2,7 +2,7 @@ import React from 'react';
 import Iframe from 'react-iframe';
 
 const Embed = () => (
-  <Iframe url="http://c4arena.com/embed"
+  <Iframe url="https://c4arena.com/embed"
         width="100%"
         height="480px"
         id="myId"

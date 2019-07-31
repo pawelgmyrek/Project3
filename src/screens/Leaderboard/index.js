@@ -18,8 +18,8 @@ class Tab extends React.Component {
  render() {
    return (
      <div className="leaderboard" id="tab-wrapper">
-       <div id="recent" className="tabs" onClick={this.handleChange.bind(this)}>Past 30 Days</div>
-       <div id="alltime" className="tabs" onClick={this.handleChange.bind(this)}>All Time</div>
+       {/* <div id="recent" className="tabs" onClick={this.handleChange.bind(this)}>Past 30 Days</div> */}
+       {/* <div id="alltime" className="tabs" onClick={this.handleChange.bind(this)}>All Time</div> */}
      </div>
    );
  }
@@ -113,7 +113,7 @@ class Leaderboard extends React.Component {
  render() {
    return (
      <div className="leaderboard" id="app">
-       <Header logo="" />
+       {/* <Header logo="" /> */}
        <Tab handleData={this.handleData.bind(this)} />
        <Board title="Leaderboard" data={this.state.data} />
      </div>
