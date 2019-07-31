@@ -43,6 +43,16 @@ const NavMenu = (props) => {
               Home
             </StyledNavLink>
           </LinkContainer>
+          <LinkContainer exact to="/embed">
+            <StyledNavLink>
+              Embed Game
+            </StyledNavLink>
+          </LinkContainer>
+          <LinkContainer exact to="/leaderboard">
+            <StyledNavLink>
+              Leaderboard
+            </StyledNavLink>
+          </LinkContainer>
           {
             isLoggedIn
               ? (
