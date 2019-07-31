@@ -37,3 +37,5 @@ REACT_APP_UPLOAD_PRESET variable above.
 * Install npm packages using yarn: `yarn install`
 
 * Run app: `yarn start`
+
+https://connect-these-4.herokuapp.com
