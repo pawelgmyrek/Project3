@@ -154,8 +154,8 @@ class Main extends React.Component {
     return (
       <>
         <br></br>
-        <div className="button" onClick={() => { this.initBoard(); }}>New Game!!!</div>
-        <table>
+        <div className="button main" onClick={() => { this.initBoard(); }}>New Game!!!</div>
+        <table className="main">
           <thead />
           <tbody>
             {this.state.board.map((row, i) => (<Row key={i} row={row} play={this.play} />))}

@@ -10,6 +10,8 @@ import API from './utils/API';
 import Login from './screens/Login';
 import Signup from './screens/Signup';
 import Main from './screens/Main';
+import Embed from './screens/Embed';
+import Leaderboard from './screens/Leaderboard';
 import Logout from './screens/Logout';
 import NavMenu from './components/NavMenu';
 
@@ -96,6 +98,8 @@ class App extends Component {
           />
           <Switch>
             <this.PrivateRoute exact path="/" component={Main} />
+            <this.PrivateRoute exact path="/embed" component={Embed} />
+            <this.PrivateRoute exact path="/leaderboard" component={Leaderboard} />
             <Route
               exact
               path="/login"
