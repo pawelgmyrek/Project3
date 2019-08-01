@@ -33,7 +33,7 @@ const NavMenu = (props) => {
   return (
     <Navbar bg="dark" variant="dark" expand="sm" className="mr-auto">
       <Navbar.Brand>
-        My App
+        Arkadia
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">

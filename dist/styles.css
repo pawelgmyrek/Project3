@@ -155,6 +155,8 @@ form {
 
    /* Typography */
   text-align: center;
+
+  color: white;
 }
 
  #swap-zone input {
@@ -191,6 +193,8 @@ form {
 
    /* Typography */
   text-align: center;
+
+  color: white;
 }
 
  /***********************************
@@ -221,7 +225,7 @@ form {
   vertical-align: top;
 
    /* Visual */
-  border: 1px solid #000;
+  border: 1px solid white
 }
 
  #player1-name,
@@ -231,6 +235,8 @@ form {
 
    /* Typography */
   font-size: 28px;
+
+  color: white;
 }
 
  #player1-chosen,
@@ -264,6 +270,7 @@ form {
 
  .outcome-trackers { /* Box-model */
   display: inline-block;
+  color: white;
 }
 
  #result h2 {
@@ -331,4 +338,8 @@ form {
 
    /* Visual */
   background-color: #d3d3d3;
+}
+
+.leaderboard {
+  color: white;
 }

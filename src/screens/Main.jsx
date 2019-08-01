@@ -58,9 +58,9 @@ class Main extends React.Component {
       // Check status of board
       const result = this.checkAll(board);
       if (result === this.state.player1) {
-        this.setState({ board, gameOver: true, message: 'Player 1 (red) wins!' });
+        this.setState({ board, gameOver: true, message: 'Player 1 wins!' });
       } else if (result === this.state.player2) {
-        this.setState({ board, gameOver: true, message: 'Player 2 (yellow) wins!' });
+        this.setState({ board, gameOver: true, message: 'Player 2 wins!' });
       } else if (result === 'draw') {
         this.setState({ board, gameOver: true, message: 'Draw game.' });
       } else {
@@ -173,8 +173,6 @@ class Main extends React.Component {
                 <div className="outcome-trackers" id="player1-losses"></div>
               </div>
             </div>
-
-            <div id="result"><h2></h2></div>
 
             <div id="player2">
               <h3 id="player2-name">Player2</h3>

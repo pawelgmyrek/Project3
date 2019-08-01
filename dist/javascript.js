@@ -167,7 +167,7 @@ currentTurnRef.on("value", function(snapshot) {
 
        // Shows yellow border around active player
       $("#player1").css("border", "2px solid yellow");
-      $("#player2").css("border", "1px solid black");
+      $("#player2").css("border", "1px solid white");
     } else if (currentTurn === 2) {
       // If its the current player's turn, tell them and show choices
       if (currentTurn === playerNum) {
@@ -179,7 +179,7 @@ currentTurnRef.on("value", function(snapshot) {
 
        // Shows yellow border around active player
       $("#player2").css("border", "2px solid yellow");
-      $("#player1").css("border", "1px solid black");
+      $("#player1").css("border", "1px solid white");
     } else if (currentTurn === 3) {
       // Where the game win logic takes place then resets to turn 1
       gameLogic(playerOneData.choice, playerTwoData.choice);
@@ -192,7 +192,6 @@ currentTurnRef.on("value", function(snapshot) {
       var moveOn = function() {
         $("#player1-chosen").empty();
         $("#player2-chosen").empty();
-        $("#result").empty();
 
          // check to make sure players didn't leave before timeout
         if (playerOneExists && playerTwoExists) {
@@ -209,8 +208,8 @@ currentTurnRef.on("value", function(snapshot) {
       $("#player1 ul").empty();
       $("#player2 ul").empty();
       $("#current-turn").html("<h2>Waiting for another player to join.</h2>");
-      $("#player2").css("border", "1px solid black");
-      $("#player1").css("border", "1px solid black");
+      $("#player2").css("border", "1px solid white");
+      $("#player1").css("border", "1px solid white");
     }
   }
 });
