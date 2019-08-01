@@ -77,7 +77,7 @@ class Login extends Component {
       <Container className="my-5">
         <Row className="justify-content-center">
           <Form>
-            <h3>Login to MyApp</h3>
+            <h3>Welcome to Arkadia!</h3>
             <Form.Group>
               <Form.Label htmlFor="email">
                 Email
@@ -90,7 +90,7 @@ class Login extends Component {
                 />
               </Form.Label>
               <Form.Text className="text-muted">
-                <span id="emailHelp">Enter your email</span>
+                <span id="emailHelp">Enter your Email</span>
               </Form.Text>
             </Form.Group>
             <Form.Group>
@@ -104,6 +104,9 @@ class Login extends Component {
                   placeholder="Password"
                 />
               </Form.Label>
+              <Form.Text className="text-muted">
+                <span id="emailHelp">Enter your Password</span>
+              </Form.Text>
             </Form.Group>
 
             <Button
