@@ -27,7 +27,7 @@
     "dotenv": "^8.0.0",
     "dotenv-webpack": "^1.7.0",
     "esm": "^3.2.25",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.16.2",
     "firebase": "^6.3.3",
     "global": "^4.4.0",
